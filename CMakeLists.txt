@@ -26,21 +26,21 @@ include(FetchContent)
 FetchContent_Declare(
     eigen
     GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-    GIT_TAG 3.3.9
+    GIT_TAG master
 )
 FetchContent_Declare(
     googletest
     GIT_REPOSITORY https://github.com/google/googletest.git
-    GIT_TAG release-1.11.0
+    GIT_TAG v1.17.0
 )
 FetchContent_Declare(
     json
     GIT_REPOSITORY https://github.com/nlohmann/json.git
-    GIT_TAG v3.11.2
+    GIT_TAG v3.12.0
 )
 FetchContent_Declare(
     lbm
-    URL https://www.openlb.net/wp-content/uploads/2022/04/olb-1.5r0.tgz
+    SOURCE_DIR ${CMAKE_SOURCE_DIR}/external/openlb
     PATCH_COMMAND ${lbm_patch}
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
